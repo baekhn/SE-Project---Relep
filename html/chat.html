@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Design</title>
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/tasker.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+          <a href="index.html">Relep</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <div id="nonauth" style="margin-left: auto;">
+            <li style="margin-left: auto;"><a href="login.html">Log in</a></li>
+          </div>
+          <div id="authmenu" style="margin-left: auto;">
+            <div class="dropdown">
+              <div class="dropbtn-notif" style="cursor: pointer; color: white;">
+                <img src="img/notification.png" style="width: 35x; height: 35px;">
+              </div>
+              <div class="dropdown-content" style="width: 340px; margin-top: 285px;">
+                <div class="notif-container">
+                  <div class="notif-box" style="margin-top: 13px;">
+                      <div>
+                          <img src="img/bill.png" width="35px" height="40px">
+                      </div>
+                      <div>
+                          <p>Tasker already send you new Invoice!</p>
+                          <p>Check it now!</p>
+                      </div>
+                  </div>
+                  <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+                  <div class="notif-box">
+                    <div>
+                        <img src="img/bill.png" width="35px" height="40px">
+                    </div>
+                    <div>
+                        <p>Tasker already send you new Invoice!</p>
+                        <p>Check it now!</p>
+                    </div>
+                  </div>
+                  <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+                  <div class="notif-box">
+                    <div>
+                        <img src="img/bill.png" width="35px" height="40px">
+                    </div>
+                    <div>
+                        <p>Tasker already send you new Invoice!</p>
+                        <p>Check it now!</p>
+                    </div>
+                  </div>
+                  <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div class="dropbtn" style="cursor: pointer;">
+                <img src="img/avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+              </div>
+              <div class="dropdown-content">
+                <a href="profile.html">Account Setting</a>
+                <a href="#">My Orders</a>
+                <a href="#">Address</a>
+                <a href="tasker.html">Switch to Tasker</a>
+                <a href="php/logout.php" style="color: red;">Log Out</a>
+              </div>
+            </div>
+            <h1 class="welcome-message" style="color: white;"></h1>
+          </div>
+        </div>
+      </ul>
+    </nav>
+    
+    <div class="container-chat">
+        <div class="chat-list">
+            <div class="search-bar1">
+                <img src="img/search-icon.png" style="position: absolute; width: 20px; height: 20px; margin-top: 9px; margin-left: 9px;">
+                <input type="text" placeholder="Cari chat yang ingin dilihat">
+            </div>
+            <hr>
+            <div class="chat-item" data-chat="chat1">
+                <div class="profile-pic"></div>
+                <div class="chat-info">
+                    <div class="chat-name">Pesulap Merah</div>
+                    <div class="chat-last-message">Dua tiga ikan tongkol...</div>
+                </div>
+                <div class="chat-time">
+                    13:35
+                    <span class="unread-notif">3</span>
+                </div>
+            </div>
+            <div class="chat-item" data-chat="chat2">
+                <div class="profile-pic"></div>
+                <div class="chat-info">
+                    <div class="chat-name">Pesulap Biru</div>
+                    <div class="chat-last-message">Empat lima ikan kerapu...</div>
+                </div>
+                <div class="chat-time">14:16</div>
+            </div>
+            <div class="chat-item" data-chat="chat3">
+                <div class="profile-pic"></div>
+                <div class="chat-info">
+                    <div class="chat-name">Pesulap Hitam</div>
+                    <div class="chat-last-message">Empat lima ikan kerapu...</div>
+                </div>
+                <div class="chat-time">
+                    15:29
+                    <span class="unread-notif">5</span>
+                </div>
+            </div>
+            <div class="chat-item" data-chat="chat4">
+                <div class="profile-pic"></div>
+                <div class="chat-info">
+                    <div class="chat-name">Pesulap Hijau</div>
+                    <div class="chat-last-message">Empat lima ikan kerapu...</div>
+                </div>
+                <div class="chat-time">19:26</div>
+            </div>
+        </div>
+        <div id="placeholder" class="chat-window active">
+            <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+                <div class="placeholder-text">Click a chat to start messaging</div>
+                <br>
+                <img src="img/chatplaceholder.png" width="250px" height="250px">
+            </div>
+        </div>
+        <div class="chat-window" id="chat1">
+            <div class="chat-header">
+                <div class="profile-pic"></div>
+                <div class="chat-name">Pesulap Merah</div>
+            </div>
+            <div class="chat-messages">
+                <div class="message yesterday">
+                    <div class="message-time">Kemarin 10.00 pm</div>
+                    <div class="message-bubble">Lorem ipsum dolor.</div>
+                    <div class="message-bubble">Jadinya gimana ?</div>
+                </div>
+                <div class="message today">
+                    <div class="message-time">Hari Ini</div>
+                    <div class="message-bubble">Lorem ipsum</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Ketik pesan...">
+                <button>&gt;</button>
+            </div>
+        </div>
+        <div class="chat-window" id="chat2">
+            <div class="chat-header">
+                <div class="profile-pic"></div>
+                <div class="chat-name">Pesulap Biru</div>
+            </div>
+            <div class="chat-messages">
+                <div class="message yesterday">
+                    <div class="message-time">Kemarin 10.00 pm</div>
+                    <div class="message-bubble">Pesan dari Biru kemarin.</div>
+                </div>
+                <div class="message today">
+                    <div class="message-time">Hari Ini</div>
+                    <div class="message-bubble">Pesan dari Biru hari ini.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Ketik pesan...">
+                <button>&gt;</button>
+            </div>
+        </div>
+        <div class="chat-window" id="chat3">
+            <div class="chat-header">
+                <div class="profile-pic"></div>
+                <div class="chat-name">Pesulap Hitam</div>
+            </div>
+            <div class="chat-messages">
+                <div class="message yesterday">
+                    <div class="message-time">Kemarin 10.00 pm</div>
+                    <div class="message-bubble">Pesan dari Hitam kemarin.</div>
+                </div>
+                <div class="message today">
+                    <div class="message-time">Hari Ini</div>
+                    <div class="message-bubble">Pesan dari Hitam hari ini.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Ketik pesan...">
+                <button>&gt;</button>
+            </div>
+        </div>
+        <div class="chat-window" id="chat4">
+            <div class="chat-header">
+                <div class="profile-pic"></div>
+                <div class="chat-name">Pesulap Hijau</div>
+            </div>
+            <div class="chat-messages">
+                <div class="message today">
+                    <div class="message-time">Hari Ini 15.00 pm</div>
+                    <div class="message-bubble">Pesan dari Hijau hari ini.</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Ketik pesan...">
+                <button>&gt;</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script src="js/check_session.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

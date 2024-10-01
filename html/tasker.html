@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliable Help</title>
+    <link rel="stylesheet" href="css/tasker.css">
+</head>
+
+<body>
+    <nav class="nav-tasker">
+        <div class="nav-left">
+            <div class="logo">
+                <a href="index.html">Relep<br><span style="font-size: 20px;">Tasker Center</span></a>
+            </div>
+            <ul>
+                <li><a href="tasker.html">Dashboard</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="dropdown">
+                <div class="dropbtn" style="cursor: pointer;">
+                    <img src="img/avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+                </div>
+                <div class="dropdown-content">
+                    <a href="profile.html">Account Setting</a>
+                    <a href="#">My Orders</a>
+                    <a href="#">Address</a>
+                    <a href="index.html">Switch to Requester</a>
+                    <a href="php/logout.php" style="color: red;">Log Out</a>
+                </div>
+            </div>
+            <h3 class="welcome-message">
+            </h3>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="summary">
+            <header class="summary-item">
+                <h1>Hello, <span class="welcome-message"></span></h1>
+            </header>
+            <div class="summary-item">
+                <h2>Total Sales</h2>
+                <p>Rp 1,909,888,-</p>
+            </div>
+            <div class="summary-item">
+                <h2>Balance</h2>
+                <p>Rp 1,909,888,-</p>
+            </div>
+        </div>
+        <section class="new-requests">
+            <h2 style="font-size: 38px;">New</h2>
+            <div class="request">
+                <span class="request-name"><span style="font-weight: bold;">Nia Ramadani</span> want to use your services   <a href="#">see details</a></span>
+                <span class="actions"><a href="#" class="accept">Accept</a> <a href="#" class="decline">Decline</a></span>
+            </div>
+            <div class="request">
+                <span class="request-name"><span style="font-weight: bold;">Andrew </span>want to use your services   <a href="#">see details</a></span>
+                <span class="actions"><a href="#" class="accept">Accept</a> <a href="#" class="decline">Decline</a></span>
+            </div>
+            <div class="request">
+                <span class="request-name"><span style="font-weight: bold;">Young K </span>want to use your services   <a href="#">see details</a></span>
+                <span class="actions"><a href="#" class="accept">Accept</a> <a href="#" class="decline">Decline</a></span>
+            </div>
+            <div class="see-all">
+                <a href="#">see all</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="dashboard">
+        <section class="order-section">
+            <h2 style="font-size: 38px;">Order</h2>
+            <div class="tabs">
+                <button class="tab-button active">All</button>
+                <button class="tab-button">Active</button>
+                <button class="tab-button">Completed</button>
+                <button class="tab-button">Canceled</button>
+            </div>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Buyer</th>
+                        <th>Due Date</th>
+                        <th>Desc</th>
+                        <th>Services</th>
+                        <th>Status</th>
+                        <th>Invoice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a style="color: #979797; text-decoration: underline;" href="">ByunBaekhyun</a></td>
+                        <td>24/05/09</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum mi vel nisl blandit, et dignissim nisl consequat. Proin eu lacus justo. Donec dictum aliquam varius. Mauris facilisis sem convallis.</td>
+                        <td>Moving</td>
+                        <td>On Progress</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td><a style="color: #979797; text-decoration: underline;" href="">ByunBaekhyun</a></td>
+                        <td>24/05/09</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum mi vel nisl blandit, et dignissim nisl consequat. Proin eu lacus justo. Donec dictum aliquam varius. Mauris facilisis sem convallis.</td>
+                        <td>Moving</td>
+                        <td>On Progress</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/check_session.js"></script>
+</body>
+
+</html>

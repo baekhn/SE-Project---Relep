@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliable Help - Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/tasker.css">
+    <link rel="stylesheet" href="css/transaction.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+
+<style>
+    .tr-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .tr-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        width: 80%;
+    }
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+          <a href="index.html">Relep</a>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="orders.html">Orders</a></li>
+          <div id="nonauth" style="margin-left: auto;">
+            <li style="margin-left: auto;"><a href="login.html">Log in</a></li>
+          </div>
+          <div id="authmenu" style="margin-left: auto;">
+            <div class="dropdown">
+              <div class="dropbtn-notif" style="cursor: pointer; color: white;">
+                <img src="img/notification.png" style="width: 35x; height: 35px;">
+              </div>
+              <div class="dropdown-content" style="width: 340px; margin-top: 285px;">
+                <div class="notif-container">
+                  <div class="notif-box" style="margin-top: 13px;">
+                      <div>
+                          <img src="img/bill.png" width="35px" height="40px">
+                      </div>
+                      <div>
+                          <p>Tasker already send you new Invoice!</p>
+                          <p>Check it now!</p>
+                      </div>
+                  </div>
+                  <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+                  <div class="notif-box">
+                    <div>
+                        <img src="img/bill.png" width="35px" height="40px">
+                    </div>
+                    <div>
+                        <p>Tasker already send you new Invoice!</p>
+                        <p>Check it now!</p>
+                    </div>
+                  </div>
+                  <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+                  <div class="notif-box">
+                    <div>
+                        <img src="img/bill.png" width="35px" height="40px">
+                    </div>
+                    <div>
+                        <p>Tasker already send you new Invoice!</p>
+                        <p>Check it now!</p>
+                    </div>
+                  </div>
+                  <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div class="dropbtn" style="cursor: pointer;">
+                <img src="img/avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+              </div>
+              <div class="dropdown-content">
+                <a href="profile.html">Account Setting</a>
+                <a href="#">My Orders</a>
+                <a href="#">Address</a>
+                <a href="tasker.html">Switch to Tasker</a>
+                <a href="php/logout.php" style="color: red;">Log Out</a>
+              </div>
+            </div>
+            <h1 class="welcome-message" style="color: white;"></h1>
+            <div class="floating-button" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+              <img src="img/chat.png" style="width: 30px; height: 30px; margin: 10px;">
+              <a href="chat.html"style="text-decoration: none;"><h3 style="margin: 0px;">Chat</h3></a>
+            </div>
+          </div>
+        </div>
+      </ul>
+    </nav>
+
+    <!-- Profile Page -->
+    <div class="profile-container">
+        <div class="profile-left">
+            <h1 style="margin-bottom: 60px;">Account</h1>
+            <a href="profile.html">
+                <h2 style="display: flex; flex-direction: row; align-items: center;"><img src="img/user.png"
+                        style="width: 50px; height: 50px;">Profile Information</h2>
+            </a>
+            <a href="notif.html">
+                <h2 style="display: flex; flex-direction: row; align-items: center;"><img src="img/notification.png"
+                        style="width:  30px; height: 30px; margin: 11px">Notification</h2>
+            </a>
+            <a href="transaction.html">
+                <h2 style="display: flex; flex-direction: row; align-items: center;"><img src="img/transaction .png"
+                        style="width: 45px; height: 45px; margin: 5px">Transaction</h2>
+            </a>
+            <a href="help.html">
+                <h2 style="display: flex; flex-direction: row; align-items: center;"><img src="img/help.png"
+                        style="width: 45px; height: 45px; margin: 7px">Help</h2>
+            </a>
+        </div>
+        <div class="profile-right">
+            <h1 style="margin-bottom: 20px; margin-top: 30px;">Transactions</h1>
+            <hr style="width: 50%; margin-left: 35px; border-bottom: 1px solid black;">
+            <section class="order-section" style="background-color: transparent;">
+                <div class="tabs">
+                    <button class="tab-button-tr active" onclick="setActiveTab('history'); setChat('history')">History</button>
+                    <button class="tab-button-tr" onclick="setActiveTab('ongoing'); setChat('ongoing')">On Going</button>
+                    <button class="tab-button-tr" onclick="setActiveTab('scheduled'); setChat('scheduled')">Scheduled</button>
+                </div>
+                <br>
+                <div class="tr-container">
+                    <div class="tr-box">
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 55px">
+                            <img src="img/clean.png" width="70px" height="75px">
+                            <div style="display: flex; flex-direction: column;">
+                                <h2 style="margin: 5px">Cleaning Services</h2>
+                                <h4 style="margin: 5px; color: #707070">by Anton on May 6 2024</h4>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 55px">
+                            <div style="display: flex; flex-direction: column; align-items:end;">
+                                <h2 style="font-size:20px; margin: 5px">Rp.250.000</h2>
+                                <h4 class="status" style="margin: 5px; color: #707070">Done</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="popupBtn" class="popup-button">
+                                <h3 class="popupBtnText" style="font-size: 18px; margin-top: 7px; margin-bottom: 7px; color: black">Reorder</h3>
+                                <a class="popupLink" style="font-size: 18px; font-weight: bold; margin-top: 7px; margin-bottom: 7px; color: black; text-decoration: none; display: none;" href="chat.html" class="chat-link">Chat</a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tr-box">
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 55px">
+                            <img src="img/clean.png" width="70px" height="75px">
+                            <div style="display: flex; flex-direction: column;">
+                                <h2 style="margin: 5px">Cleaning Services</h2>
+                                <h4 style="margin: 5px; color: #707070">by Anton on May 6 2024</h4>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 55px">
+                            <div style="display: flex; flex-direction: column; align-items:end;">
+                                <h2 style="font-size:20px; margin: 5px">Rp.250.000</h2>
+                                <h4 class="status" style="margin: 5px; color: #707070">Done</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="popupBtn" class="popup-button">
+                                <h3 class="popupBtnText" style="font-size: 18px; margin-top: 7px; margin-bottom: 7px; color: black">Reoder</h3>
+                                <a class="popupLink" style="font-weight: bold; font-size: 18px; margin-top: 7px; margin-bottom: 7px; color: black; text-decoration: none; display: none;" href="chat.html" class="chat-link" style="display: none; font-weight: bold;">Chat</a></button>
+                        </div>
+                    </div>
+                    <div class="tr-box">
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 55px">
+                            <img src="img/clean.png" width="70px" height="75px">
+                            <div style="display: flex; flex-direction: column;">
+                                <h2 style="margin: 5px">Cleaning Services</h2>
+                                <h4 style="margin: 5px; color: #707070">by Anton on May 6 2024</h4>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: row; align-items: center; gap: 55px">
+                            <div style="display: flex; flex-direction: column; align-items:end;">
+                                <h2 style="font-size:20px; margin: 5px">Rp.250.000</h2>
+                                <h4 class="status" style="margin: 5px; color: #707070">Done</h4>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="popupBtn" class="popup-button">
+                                <h3 class="popupBtnText" style="font-size: 18px; margin-top: 7px; margin-bottom: 7px; color: black">Reorder</h3>
+                                <a class="popupLink" style="font-weight: bold;font-size: 18px; margin-top: 7px; margin-bottom: 7px; color: black; text-decoration: none; display: none;" href="chat.html" class="chat-link" style="display: none; font-weight: bold;">Chat</a> </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn">&times;</span>
+                        <h2>Details</h2>
+                        <p><strong>Tasker:</strong> Anton</p>
+                        <p><strong>Date & Time:</strong> 6 May 2024 - 11:00 PM</p>
+                        <p><strong>Task type:</strong> <span class="task-type">Cleaning Services</span></p>
+                        <p><strong>Location:</strong> Jalan Nasi Goreng Special Blok B No. 7, Jakarta Utara,
+                            Indonesia</p>
+                        <p><strong>Task Details:</strong> Lorem ipsum dolor sit amet consectetur adipiscing elit
+                            Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.</p>
+                        <p><strong>Price:</strong> Rp 250.000,-</p>
+                        <hr>
+                        <div class="payment-details">
+                            <h3>Payment Details</h3>
+                            <p><strong>Tasker Fee:</strong> Rp 237.000,-</p>
+                            <p><strong>Platform Fee:</strong> Rp 13.000,-</p>
+                            <p><strong>Total:</strong> Rp 250.000,-</p>
+                            <hr>
+                            <p>Paid with Virtual Account BCA <strong>Rp. 250.000,-</strong></p>
+                            <div class="popup-footer">
+                                <button class="chat-button">Chat</button>
+                                <button class="reorder-button">Reorder</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <script src="js/transaction.js"></script>
+    <script src="js/check_session.js"></script>
+</body>
+
+</html>

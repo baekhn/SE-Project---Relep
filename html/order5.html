@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reliable Help - Order Successful</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/order5.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">Relep</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <div id="nonauth" style="margin-left: auto;">
+        <li style="margin-left: auto;"><a href="login.html">Log in</a></li>
+      </div>
+      <div id="authmenu" style="margin-left: auto;">
+        <div class="dropdown">
+          <div class="dropbtn-notif" style="cursor: pointer; color: white;">
+            <img src="img/notification.png" style="width: 35x; height: 35px;">
+          </div>
+          <div class="dropdown-content" style="width: 340px; margin-top: 285px;">
+            <div class="notif-container">
+              <div class="notif-box" style="margin-top: 13px;">
+                  <div>
+                      <img src="img/bill.png" width="35px" height="40px">
+                  </div>
+                  <div>
+                      <p>Tasker already send you new Invoice!</p>
+                      <p>Check it now!</p>
+                  </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+              <div class="notif-box">
+                <div>
+                    <img src="img/bill.png" width="35px" height="40px">
+                </div>
+                <div>
+                    <p>Tasker already send you new Invoice!</p>
+                    <p>Check it now!</p>
+                </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+              <div class="notif-box">
+                <div>
+                    <img src="img/bill.png" width="35px" height="40px">
+                </div>
+                <div>
+                    <p>Tasker already send you new Invoice!</p>
+                    <p>Check it now!</p>
+                </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropbtn" style="cursor: pointer;">
+            <img src="img/avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+          </div>
+          <div class="dropdown-content">
+            <a href="profile.html">Account Setting</a>
+            <a href="#">My Orders</a>
+            <a href="#">Address</a>
+            <a href="tasker.html">Switch to Tasker</a>
+            <a href="php/logout.php" style="color: red;">Log Out</a>
+          </div>
+        </div>
+        <h1 class="welcome-message" style="color: white;"></h1>
+        <div class="floating-button" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+          <img src="img/chat.png" style="width: 30px; height: 30px; margin: 10px;">
+          <a href="chat.html"style="text-decoration: none;"><h3 style="margin: 0px;">Chat</h3></a>
+        </div>
+      </div>
+    </div>
+  </ul>
+</nav>
+
+  <!-- Order Step 4 Page -->
+  <div class="order-container">
+    <!-- Steps Indicator -->
+    <div class="steps-container">
+      <div class="step">
+        <div class="circle">1</div>
+      </div>
+      <div class="line"></div>
+      <div class="step">
+        <div class="circle">2</div>
+      </div>
+      <div class="line"></div>
+      <div class="step">
+        <div class="circle">3</div>
+      </div>
+      <div class="line"></div>
+      <div class="step active">
+        <div class="circle">4</div>
+        <div class="step-description">done</div>
+      </div>
+    </div>
+    <!-- Confirmation Card -->
+    <div class="container-confirmation-card">
+      <div class="payment-method">
+        <h2>Success</h2>
+        
+        <div class="task-details">
+          <div class="task-detail-item">
+            <h3>Tasker:</h3>
+            <p>Pesulap Merah</p>
+          </div>
+          <div class="task-detail-item">
+            <h3>Date & Time:</h3>
+            <p>19 September 2021 - 10:00 AM</p>
+          </div>
+          <div class="task-detail-item">
+            <h3>Task type (?):</h3>
+            <p><span class="task-type-box">Electrical Help</span></p>
+          </div>
+          <div class="task-detail-item">
+            <h3>Location:</h3>
+            <p>Jalan Nasi Goreng Special Blok B No. 7, Jakarta Utara, Indonesia</p>
+          </div>
+          <div class="task-detail-item">
+            <h3>Task Details:</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.</p>
+          </div>
+          <div class="task-detail-item">
+            <h3>Price:</h3>
+            <p>$54.71/hr</p>
+          </div>
+        </div>
+
+        <div class="agreement">
+          <input type="checkbox" id="agree2">
+          <label for="agree2">I Agree that payment will be automatically charged to my credit or debit card on file within 24 hours of my Tasker submitting their invoice</label>
+        </div>
+
+        <div class="button-confirmation">
+          <button class="confirm-button" onclick="window.location.href='index.html'">Chat Now</button>
+          <button class="confirm-button" onclick="window.location.href='index.html'">Home</button>
+        </div>
+        
+      </div>
+
+      
+    </div>
+  </div>
+</body>
+
+<script>
+
+</script>
+
+</html>

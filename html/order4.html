@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reliable Help - Order Step 4</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/order4.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">Relep</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <div id="nonauth" style="margin-left: auto;">
+        <li style="margin-left: auto;"><a href="login.html">Log in</a></li>
+      </div>
+      <div id="authmenu" style="margin-left: auto;">
+        <div class="dropdown">
+          <div class="dropbtn-notif" style="cursor: pointer; color: white;">
+            <img src="img/notification.png" style="width: 35x; height: 35px;">
+          </div>
+          <div class="dropdown-content" style="width: 340px; margin-top: 285px;">
+            <div class="notif-container">
+              <div class="notif-box" style="margin-top: 13px;">
+                  <div>
+                      <img src="img/bill.png" width="35px" height="40px">
+                  </div>
+                  <div>
+                      <p>Tasker already send you new Invoice!</p>
+                      <p>Check it now!</p>
+                  </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+              <div class="notif-box">
+                <div>
+                    <img src="img/bill.png" width="35px" height="40px">
+                </div>
+                <div>
+                    <p>Tasker already send you new Invoice!</p>
+                    <p>Check it now!</p>
+                </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+              <div class="notif-box">
+                <div>
+                    <img src="img/bill.png" width="35px" height="40px">
+                </div>
+                <div>
+                    <p>Tasker already send you new Invoice!</p>
+                    <p>Check it now!</p>
+                </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropbtn" style="cursor: pointer;">
+            <img src="img/avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+          </div>
+          <div class="dropdown-content">
+            <a href="profile.html">Account Setting</a>
+            <a href="#">My Orders</a>
+            <a href="#">Address</a>
+            <a href="tasker.html">Switch to Tasker</a>
+            <a href="php/logout.php" style="color: red;">Log Out</a>
+          </div>
+        </div>
+        <h1 class="welcome-message" style="color: white;"></h1>
+        <div class="floating-button" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;">
+          <img src="img/chat.png" style="width: 30px; height: 30px; margin: 10px;">
+          <a href="chat.html"style="text-decoration: none;"><h3 style="margin: 0px;">Chat</h3></a>
+        </div>
+      </div>
+    </div>
+  </ul>
+</nav>
+
+  <!-- Order Step 4 Page -->
+  <div class="order-container">
+    <!-- Steps Indicator -->
+    <div class="steps-container">
+      <div class="step">
+        <div class="circle">1</div>
+      </div>
+      <div class="line"></div>
+      <div class="step">
+        <div class="circle">2</div>
+      </div>
+      <div class="line"></div>
+      <div class="step">
+        <div class="circle">3</div>
+      </div>
+      <div class="line"></div>
+      <div class="step active">
+        <div class="circle">4</div>
+        <div class="step-description">done</div>
+      </div>
+    </div>
+    <!-- Confirmation Card -->
+    <div class="container-confirmation-card">
+      <div class="payment-method">
+        <h2>Choose payment method</h2>
+        <div class="payment-dropdown">
+          <div class="payment-option" data-content="credit-card">
+            <button class="payment-button main-button">
+              <span class="icon"><img src="img/creditcard.png" alt=""></span>
+              Credit Card
+            </button>
+            <ul class="sub-options">
+              <li><button class="payment-button sub-button">CC 1</button></li>
+              <li><button class="payment-button sub-button">CC 2</button></li>
+            </ul>
+          </div>
+          <div class="payment-option active" data-content="virtual-account-bca">
+            <button class="payment-button main-button">
+              <span class="icon"><img src="img/creditcard.png" alt=""></span>
+              Virtual Account
+            </button>
+            <ul class="sub-options">
+              <li><button class="payment-button sub-button">Virtual Account BCA</button></li>
+              <li><button class="payment-button sub-button">VA 2</button></li>
+            </ul>
+          </div>
+          <div class="payment-option" data-content="e-wallet">
+            <button class="payment-button main-button">
+              <span class="icon"><img src="img/creditcard.png" alt=""></span>
+              E-Wallet
+            </button>
+            <ul class="sub-options">
+              <li><button class="payment-button sub-button">E-Wallet 1</button></li>
+              <li><button class="payment-button sub-button">E-Wallet 2</button></li>
+            </ul>
+          </div>
+        </div>
+        <button class="confirm-button" onclick="window.location.href='order5.html'">Payment</button>
+      </div>
+
+      <div class="task-details">
+        <div class="task-detail-item">
+          <h3>Tasker:</h3>
+          <p>Pesulap Merah</p>
+        </div>
+        <div class="task-detail-item">
+          <h3>Date & Time:</h3>
+          <p>19 September 2021 - 10:00 AM</p>
+        </div>
+        <div class="task-detail-item">
+          <h3>Task type (?):</h3>
+          <p><span class="task-type-box">Electrical Help</span></p>
+        </div>
+        <div class="task-detail-item">
+          <h3>Location:</h3>
+          <p>Jalan Nasi Goreng Special Blok B No. 7, Jakarta Utara, Indonesia</p>
+        </div>
+        <div class="task-detail-item">
+          <h3>Task Details:</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.</p>
+        </div>
+        <div class="task-detail-item">
+          <h3>Price:</h3>
+          <p>$54.71/hr</p>
+        </div>
+        <div class="line" id="separator"></div>
+        <h3>Detail Payment</h3>
+        <div class="task-detail-item">
+          <h3>Price: </h3>
+          <p>$54.71/hr</p>
+        </div>
+        <div class="payment-details" id="virtual-account-bca">
+          <h3>Virtual Account BCA</h3>
+          <p>Pembayaran dapat dilakukan dengan menggunakan mBCA, KlikBCA, dan ATM BCA</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="js/check_session.js"></script>
+  <script src="js/timer.js"></script>
+</body>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mainButtons = document.querySelectorAll('.main-button');
+  const subButtons = document.querySelectorAll('.sub-button');
+  const paymentDetails = document.querySelectorAll('.payment-details');
+
+  mainButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const parent = this.parentElement;
+      const isActive = parent.classList.contains('active');
+
+      document.querySelectorAll('.payment-option').forEach(option => {
+        option.classList.remove('active');
+      });
+
+      if (!isActive) {
+        parent.classList.add('active');
+      }
+    });
+  });
+
+  subButtons.forEach(button => {
+    button.addEventListener('click', function() {
+       // Remove 'selected' class from all sub-buttons
+       subButtons.forEach(btn => {
+        btn.classList.remove('selected');
+      });
+
+      this.classList.add('selected');
+    });
+  });
+});
+</script>
+
+</html>

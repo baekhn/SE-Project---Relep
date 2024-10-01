@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reliable Help</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/navbar.css">
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">Relep</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="orders.html">Orders</a></li>
+      <div id="nonauth" style="margin-left: auto;">
+        <li style="margin-left: auto;"><a href="login.html">Log in</a></li>
+      </div>
+      <div id="authmenu" style="margin-left: auto;">
+        <div class="dropdown">
+          <div class="dropbtn-notif" style="cursor: pointer; color: white;">
+            <img src="img/notification.png" style="width: 35x; height: 35px;">
+          </div>
+          <div class="dropdown-content" style="width: 340px; margin-top: 285px;">
+            <div class="notif-container">
+              <div class="notif-box" style="margin-top: 13px;">
+                  <div>
+                      <img src="img/bill.png" width="35px" height="40px">
+                  </div>
+                  <div>
+                      <p>Tasker already send you new Invoice!</p>
+                      <p>Check it now!</p>
+                  </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-bottom: 10px;">
+              <div class="notif-box">
+                <div>
+                    <img src="img/bill.png" width="35px" height="40px">
+                </div>
+                <div>
+                    <p>Tasker already send you new Invoice!</p>
+                    <p>Check it now!</p>
+                </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+              <div class="notif-box">
+                <div>
+                    <img src="img/bill.png" width="35px" height="40px">
+                </div>
+                <div>
+                    <p>Tasker already send you new Invoice!</p>
+                    <p>Check it now!</p>
+                </div>
+              </div>
+              <hr style="width: 100%; border-bottom: 1px solid #ddd; margin-right: 5px;">
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="dropbtn" style="cursor: pointer;">
+            <img src="img/avatar.png" style="border-radius: 50%; width: 50px; height: 50px;">
+          </div>
+          <div class="dropdown-content">
+            <a href="profile.html">Account Setting</a>
+            <a href="#">My Orders</a>
+            <a href="#">Address</a>
+            <a href="tasker.html">Switch to Tasker</a>
+            <a href="php/logout.php" style="color: red;">Log Out</a>
+          </div>
+        </div>
+        <h1 class="welcome-message" style="color: white;"></h1>
+        <div class="floating-button" style="display: flex; flex-direction: row; align-items: center; justify-content: space-around;" onclick="window.location.href='chat.html'">
+          <img src="img/chat.png" style="width: 30px; height: 30px; margin: 10px;">
+          <a href="chat.html"style="text-decoration: none;"><h3 style="margin: 0px;">Chat</h3></a>
+        </div>
+      </div>
+    </div>
+  </ul>
+</nav>
+
+
+  <!-- Main Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Book trusted help for home tasks</h1>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="What do you need help with?" onkeyup="filterFunction()">
+        <button><img src="img/search-icon.png" alt="Search Icon"></button>
+        <div id="dropdown" class="dropdown-content">
+          <a href="#">IKEA Assembly</a>
+          <a href="#">TV Mounting</a>
+          <a href="#">Furniture Assembly</a>
+          <a href="#">General Mounting</a>
+          <a href="#">Truck Assisted Help Moving</a>
+          <a href="#">Help Moving</a>
+          <a href="#">Cleaning</a>
+          <a href="#">Door, Cabinet, & Furniture Repair</a>
+          <a href="#">Heavy Lifting & Loading</a>
+          <a href="#">Electrical help</a>
+        </div>
+      </div>
+      <div class="task-categories">
+        <button class="task-category active">Assembly</button>
+        <button class="task-category">Mounting</button>
+        <button class="task-category">Moving</button>
+        <button class="task-category">Cleaning</button>
+        <button class="task-category">Outdoor Help</button>
+        <button class="task-category">Home Repairs</button>
+        <button class="task-category">Painting</button>
+        <button class="task-category">Trending</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="popular-projects">
+    <h2>Popular Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <a href="#">
+          <img src="img/furniture-assembly.png" alt="Furniture Assembly">
+          <h3>Furniture Assembly</h3>
+          <p>Projects starting at $49</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/mount-art.jpg" alt="Mount Art or Shelves">
+          <h3>Mount Art or Shelves</h3>
+          <p>Projects starting at $65</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/mount-tv.jpeg" alt="Mount a TV">
+          <h3>Mount a TV</h3>
+          <p>Projects starting at $69</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/move-furniture.jpg" alt="Help Moving">
+          <h3>Help Moving</h3>
+          <p>Projects starting at $67</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/clean-apartment.jpg" alt="Home & Apartment Cleaning">
+          <h3>Home & Apartment Cleaning</h3>
+          <p>Projects starting at $49</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/repair-plumbing.jpg" alt="Minor Plumbing Repairs">
+          <h3>Minor Plumbing Repairs</h3>
+          <p>Projects starting at $74</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/electrical-help.jpg" alt="Electrical Help">
+          <h3>Electrical Help</h3>
+          <p>Projects starting at $69</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="img/heavy-lifting.jpg" alt="Heavy Lifting">
+          <h3>Heavy Lifting</h3>
+          <p>Projects starting at $61</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Customer Testimonials</h2>
+    <div class="testimonials-container">
+      <div class="testimonial">
+        <h3>Elizabeth P. <span>★★★★★</span></h3>
+        <p>Vitalii assembled the IKEA Norli drawer chest for me in less than 30 minutes, and he assembled a metal wire
+          shelving unit as well in about 10 minutes. He also fixed a drawer on an already assembled desk so it exten...
+        </p>
+        <a href="#">IKEA Furniture Assembly</a>
+      </div>
+      <div class="testimonial">
+        <h3>Tiffany B. <span>★★★★★</span></h3>
+        <p>David did an awesome job assembling crib and dresser for nursery. Really appreciate this! He cleaned up the
+          area after his work, organized the boxes for easy disposal and went through the directions wit...</p>
+        <a href="#">Furniture Assembly</a>
+      </div>
+      <div class="testimonial">
+        <h3>Amanda L. <span>★★★★★</span></h3>
+        <p>I hired Joe to patch 2 holes on my wall and 1 hole on my ceiling. Joe was great with communication, was fast,
+          professional and did a fantastic job. He even came back to do a second layer on the patches to make it look...
+        </p>
+        <a href="#">Home repairs</a>
+      </div>
+      <div class="testimonial">
+        <h3>Sabrina K. <span>★★★★★</span></h3>
+        <p>Aleksandr was fantastic! He came with all the equipment to do the job, even the hardware I didn't know I
+          would need. He hung a heavy chandelier perfectly and fixed a cabinet to our wall. 100% would hire...</p>
+        <a href="#">Electrical help</a>
+      </div>
+      <div class="testimonial">
+        <h3>Jana T. <span>★★★★★</span></h3>
+        <p>Jose fixed my AC drain line which was clogging my master bathroom sink. He was prompt, communicative, and
+          efficient. Highly recommend!</p>
+        <a href="#">Plumbing</a>
+      </div>
+      <div class="testimonial">
+        <h3>Elisa R. <span>★★★★★</span></h3>
+        <p>Michael did a great job helping us install frameless glass hinged shower doors with an unusual set up. He was
+          patient and willing to help figure it out with us. Thank you Michael!</p>
+        <a href="#">General Mounting</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column about-us">
+        <h3>About Us</h3>
+        <p>Welcome to Reliable Help, the go-to platform where people can find and offer simple, everyday jobs. Whether
+          you're looking to earn extra income by
+          completing tasks or need reliable help to get things done,
+          Reliable Help connects you with the right people for the job. Our mission is to make job seeking and hiring
+          hassle-free and efficient for everyone.</p>
+        <p><i class="fas fa-phone"></i> +62 8013 5679 3847</p>
+        <p><i class="fas fa-envelope"></i> relep@gmail.com</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter your e-mail">
+          <button>Send</button>
+        </div>
+      </div>
+      <div class="footer-column latest-tweet">
+        <h3>Latest Tweet</h3>
+        <p><i class="fab fa-twitter"></i> "Incredibly impressed with the assembly service from @Relep. Fast, reliable,
+          and professional! #HomeImprovement #Relep"</p>
+        <p><i class="fab fa-twitter"></i> "Used @Relep for a moving service, and they were fantastic! Punctual and
+          handled everything with care. #MovingService #Relep"</p>
+      </div>
+      <div class="footer-column instagram">
+        <h3>Instagram</h3>
+        <div class="instagram-images">
+          <img src="img/clean-apartment.jpg" alt="Instagram Image">
+          <img src="img/repair-plumbing.jpg" alt="Instagram Image">
+          <img src="img/furniture-assembly.png" alt="Instagram Image">
+          <img src="img/mount-art.jpg" alt="Instagram Image">
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Our works</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacts</a>
+      </div>
+      <div class="footer-credit">
+        <p>Colorlib</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/check_session.js"></script>
+</body>
+
+</html>
