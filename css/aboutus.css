@@ -1,0 +1,253 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #222831;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 20px;
+  height: 70px;
+}
+
+nav .logo a {
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 10px;
+}
+
+nav .logo a:hover {
+  transform: scale(1.2);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 40px;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  position: relative;
+}
+
+nav ul li a:not(.login-button)::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00ADB5;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:not(.login-button):hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+nav ul li .login-button {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 25px;
+  margin-left: 110vh;
+}
+
+nav ul li .login-button:hover {
+  background-color: black;
+}
+
+/* New Section styles */
+.about-section {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 50px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+.about-content {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #393E46;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Other Sections */
+section {
+  padding: 50px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #393E46;
+}
+
+section p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.founder-section img, .culture-section img, .citizenship-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #393E46;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #00ADB5;
+}
+
+.footer-column p {
+  line-height: 1.6;
+}
+
+.newsletter {
+  display: flex;
+  margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 10px;
+  border: none;
+  background-color: #00ADB5;
+  color: #222831;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.instagram-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.instagram-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Footer */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #393e46;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FFD369;
+}
+
+.footer-credit {
+  text-align: right;
+}
+
+.footer-credit p {
+  margin: 0;
+}

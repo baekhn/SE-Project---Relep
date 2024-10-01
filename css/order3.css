@@ -1,0 +1,140 @@
+body {
+  background-color: #f0f0f0; 
+  font-family: Arial, sans-serif;
+}
+
+.order-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.steps-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 1px; 
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.step.active .circle {
+  background-color: #73DF77; 
+}
+
+.step-description {
+  position: absolute;
+  top: 180px;
+  font-size: 1em;
+  color: #333;
+}
+
+.line {
+  width: 120px;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.step p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.step.active p {
+  margin-top: -10px;
+}
+
+.confirmation-card {
+  background-color: white;
+  margin: 50px auto;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  overflow: hidden;
+}
+
+.grey-header {
+  width: 100%;
+  height: 70px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grey-header p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.confirmation-card h1 {
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 20px; 
+}
+
+.confirmation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px; 
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: left; 
+}
+
+.detail b {
+  width: 150px;
+  margin-right: 10px; 
+}
+
+.task-type-box {
+  background-color: #DAD0E8;
+  color: #5A1166;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.agreement {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.agreement label {
+  margin-left: 10px;
+}
+
+.booking-button {
+  background-color: #d3d3d3; 
+  color: black;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 50px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}

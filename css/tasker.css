@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d8d8d8;
+}
+
+.nav-tasker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    padding-left: 75px;
+    padding-right: 75px;
+    position: relative;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .logo a {
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.nav-left .logo a:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-left ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-left ul li {
+    margin-left: 40px;
+}
+
+.nav-left ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.nav-left ul li a:hover {
+    color: gray;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+    font-size: 22px;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* margin-left: 50px; */
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+    transition: .3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    transition: .3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition: .3s ease;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    flex: 1;
+    flex-direction: row;
+    text-align: center;
+}
+
+.summary-item h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.summary-item p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.new-requests {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.new-requests h2 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+.request {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.request a {
+    margin-left: 15px;
+}
+
+.request a,
+.see-all a,
+td a {
+    color: #bbbbbb;
+}
+
+.request:last-child {
+    border-bottom: none;
+}
+
+.request-name {
+    width: 80%;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions .accept {
+    color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.actions .decline {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.see-all {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.dashboard {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+.order-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.order-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    font-weight: bold;
+}
+
+
+.tab-button-tr, .tab-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s ease;
+}
+
+.tab-button-tr.active, .tab-button.active {
+    background-color: #a0a0a0;
+}
+
+.tab-button-tr:hover, .tab-button:hover {
+    background-color: rgb(190, 190, 190);
+    transition: .3s ease;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.status{
+    background-color: #85e993;
+    padding: 8px 15px 8px 15px;
+    border-radius: 10px;
+}
+
+.order-table th,
+.order-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 15%;
+    padding-bottom: 30px;
+}
+
+.order-table th:nth-child(3),
+.order-table td:nth-child(3) {
+    width: 20%;
+    /* Set your specific width here */
+}
+
+.order-table th {
+    background-color: #f9f9f9;
+}
+
+.order-table td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.order-table td a:hover {
+    text-decoration: underline;
+}
